@@ -1,0 +1,71 @@
+def popout(l):
+    print("Element",l.pop(),"has been popped.")
+   
+def push(l):
+    l.append(k)
+    return
+
+print("      STACK      ")
+print("-----------------")
+print("                 ")
+
+lis=[]
+n=1
+
+while n==1:
+    print("ENTER THE OPTION")
+    print("1. PUSH")
+    print("2. POP")
+    print("3. DISPLAY")
+    print("4. EXIT")
+
+    o=int(input("Enter the option :"))
+
+    if o==4:
+        break
+
+    elif o==3:
+        if len(lis)<1:
+            print("STACK IS EMPTY")
+            m=input("Do you want to continue(Y/N) :")
+            if m == "y" or "Y":
+                n=1
+            else:
+                break
+
+        else:
+            for i in lis[:0:-1]:
+                print(i,end="---",)
+            print(lis[0])
+            m=input("Do you want to continue(Y/N) :")
+            if m == "y" or "Y":
+                n=1
+            else:
+                o=4
+
+    elif o==2:
+        if len(lis)<1:
+            print("STACK UNDERFLOW")
+            m=input("Do you want to continue(Y/N) :")
+            if m == "y" or "Y":
+                n=1
+            else:
+                o=4
+
+        else:
+            popout(lis)
+            m=input("Do you want to continue(Y/N) :")
+            if m == "y" or "Y":
+                n=1
+            else:
+                o=4
+
+    elif o==1:
+        k=input("Enter the element to push :")
+        push(lis)
+        m=input("Do you want to continue(Y/N) :")
+        if m == "y" or "Y":
+            n=1
+
+        else:
+            o=4
